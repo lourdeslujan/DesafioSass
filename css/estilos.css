@@ -1,0 +1,221 @@
+body {
+    margin : 0;
+    padding: 0;
+    }
+header{
+    background-image: url("../multimedia/css/header.img");
+    background-repeat: no-repeat;
+     }
+h1{
+    color: #8946A6;
+    font-family: 'Pacifico',sans-serif;
+}
+
+h2{
+    color: #B762C1;
+    font-family: 'Shadows Into Light',sans-serif;
+}
+
+h3{
+    color: #8946A6;
+    font-family: 'Shadows Into Light',sans-serif;
+}
+
+nav ul { 
+    list-style: none;
+    padding: 5px;
+    margin: 10px;
+}
+
+nav ul li {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #EA99D5;
+}
+
+#carouselProductos{
+    width:40%;
+    margin: 0 auto;
+}
+
+.imagenes {
+    padding: 10px;
+    border: 3px solid #B762C1;
+    border-radius: 5px;
+}
+
+.productosDestacados{
+
+    margin:20px 0px;
+
+}
+
+.productosDestacados article{
+    display: inline-block;
+}
+
+.productosDestacadosCards{
+    /* height: 80%; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 2%;
+    row-gap: 2%;
+    justify-items: center;
+    align-items:center;
+
+    grid-template-areas: 
+    "card1 card2 card3"
+    "card4 card5 card6"
+    
+}
+
+.productosDestacados__card{
+    display:flex;
+    flex-direction: column;
+    margin: 20px 50px;
+    padding: 20px 20px;
+    background-color: #FDEBF7;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 3px solid #B762C1;
+    border-radius: 3%;
+    
+
+}
+
+.productosDestacados__card__foto{
+ 
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#hilos{
+    grid-area: card1;
+}
+#hilos div{
+    background-image: url(../multimedia/images/hilos.jpg);
+}
+#bastidores{
+    grid-area: card2;
+}
+#bastidores div{
+    background-image: url(../multimedia/images/bastidores.jpg);
+}
+#tijeras{
+    grid-area: card3;
+}
+#tijeras div{
+    background-image: url(../multimedia/images/tijeras.jpg);
+}
+#telas{
+    grid-area: card4;
+}
+#telas div{
+    background-image: url(../multimedia/images/telas.jpg);
+}
+#accesorios{
+    grid-area: card5;
+}
+#accesorios div{
+    background-image: url(../multimedia/images/accesorios.jpg);
+}
+#merceria{
+    grid-area: card6;}
+
+#merceria div{
+    background-image: url(../multimedia/images/merceria.jpg);
+}
+
+.footer{
+    font-family: 'Shadows Into Light',sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #EA99D5;
+}
+
+@media screen and (max-width: 1200px){
+
+    .productosDestacados{
+
+        height: 1550px;
+    
+    }
+    .productosDestacadosCards{
+        /* height: 80%; */
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 2%;
+        row-gap: 5%;
+        grid-template-areas: 
+        "card1 card2" 
+        "card3 card4" 
+        "card5 card6"
+        
+    }
+
+}
+
+/* 2er MQ para corregir solapamiento de elementos nav bar con su borde */
+
+@media screen and (max-width: 1065px){
+    .headerMenu ul{
+        flex-direction: column;
+    }
+    
+    .headerMenu ul li{
+        margin-bottom: 15px;
+    }
+}
+
+/* 3er MQ para pasar grid de productos de 2 columnas a 1 columna y 6 filas cuando desaparece otra card*/
+
+@media screen and (max-width: 780px){
+
+   
+    
+    .productosDestacados{
+
+        height: 3400px;
+    
+    }
+    .productosDestacadosCards{
+        /* height: 80%; */
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            column-gap: 2%;
+            row-gap: 5%;
+            grid-template-areas: 
+            "card1" 
+            "card2" 
+            "card3"
+            "card4" 
+            "card5"
+            "card6"
+        
+    }
+
+
+}
+
+/* 4to MQ (Vista Mobile) para ubicar todo el contenido en forma vertical cuando se empieza a solapar el conenido del Header */
+
+
+
+
