@@ -1,0 +1,57 @@
+@media screen and (max-width: 1200px){
+
+    .productosDestacados{
+
+        height: 1550px;
+        &Cards{
+            /* height: 80%; */
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            column-gap: 2%;
+            row-gap: 5%;
+            grid-template-areas: 
+            "card1 card2" 
+            "card3 card4" 
+            "card5 card6"
+        }
+    }
+}
+
+/* 2er MQ para corregir solapamiento de elementos nav bar con su borde */
+
+@media screen and (max-width: 1065px){
+    .headerMenu ul{
+        flex-direction: column;
+        li{
+            margin-bottom: 15px;
+        }
+    }
+}
+
+/* 3er MQ para pasar grid de productos de 2 columnas a 1 columna y 6 filas cuando desaparece otra card*/
+
+@media screen and (max-width: 780px){
+  
+    .productosDestacados{
+
+        height: 3400px;
+        &Cards{
+            /* height: 80%; */
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                column-gap: 2%;
+                row-gap: 5%;
+                grid-template-areas: 
+                "card1" 
+                "card2" 
+                "card3"
+                "card4" 
+                "card5"
+                "card6"
+        }
+    }
+}

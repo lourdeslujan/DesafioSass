@@ -1,0 +1,27 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+body {
+    background: linear-gradient(90deg, rgba(243, 222, 162, 0.644) 0%, rgba(240, 232, 122, 0.253) 50%, rgba(243, 222, 162, 0.644) 100%); 
+}
+header{
+    background-image: url("../multimedia/css/header.img");
+    background-repeat: no-repeat;
+     }
+h1{
+    color: $colorH1;
+    font-family: 'Pacifico',sans-serif;
+}
+
+h2{
+    color: $colorH2;
+    font-family: 'Shadows Into Light',sans-serif;
+}
+
+h3{
+    color: $colorH3;
+    font-family: 'Shadows Into Light',sans-serif;
+}
